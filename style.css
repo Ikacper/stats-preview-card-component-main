@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.card {
+  background-color: hsl(244, 38%, 16%);
+  width: 80%;
+  margin: auto;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.card__image {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(
+      0deg,
+      hsla(277, 64%, 61%, 0.3),
+      hsla(277, 64%, 61%, 0.3)
+    ),
+    url(./images/image-header-mobile.jpg) center no-repeat;
+  background-size: cover;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.card__title {
+  color: hsl(0, 0%, 100%);
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.title--purple {
+  color: hsl(277, 64%, 61%);
+}
+
+.card__text {
+  color: hsla(0, 0%, 100%, 0.75);
+  padding: 0 2.5rem 2rem 2.5rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.card__stats {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.queries {
+  text-transform: uppercase;
+}
+
+.card__stat-heading {
+  color: hsla(0, 0%, 100%, 0.75);
+  padding: 0.2rem 0 1rem 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 70%;
+  }
+
+  .card__image {
+    width: 500px;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        hsla(277, 64%, 61%, 0.3),
+        hsla(277, 64%, 61%, 0.3)
+      ),
+      url(./images/image-header-desktop.jpg) center no-repeat;
+    border-top-left-radius: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .card__insights {
+    margin: auto;
+  }
+
+  .card__title {
+    font-size: 1.8rem;
+    padding: 4rem 0 2rem 0;
+    text-align: left;
+    max-width: 350px;
+  }
+
+  .card__text {
+    text-align: left;
+    padding: 0rem 0 4rem 0;
+    max-width: 300px;
+  }
+
+  .card__list-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 300px;
+  }
+
+  .card__list-stats > div {
+    text-align: left;
+    padding: 0 0 3rem 0;
+  }
+}
